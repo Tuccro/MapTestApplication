@@ -15,7 +15,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:hint="Address From"
+        android:hint="@string/address_from"
         android:singleLine="true" />
 
     <EditText
@@ -23,7 +23,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:hint="Address To"
+        android:hint="@string/address_to"
         android:singleLine="true" />
 
     <Button
@@ -31,6 +31,6 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="START" />
+        android:text="@string/start" />
 </LinearLayout>
 
