@@ -52,31 +52,31 @@ public class MainActivity extends AppCompatActivity {
         if (StringUtils.isNotBlank(addressFrom.getText())
                 && StringUtils.isNotBlank(addressTo.getText())) {
 
-            String uri = "http://maps.google.com/maps?f=d&hl=en"
-                    + "&saddr=" + addressFrom.getText().toString()
-                    + "&daddr=" + addressTo.getText().toString();
+            String uri = getString(R.string.google_maps_url)
+                    + getString(R.string.address1) + addressFrom.getText().toString()
+                    + getString(R.string.address2) + addressTo.getText().toString();
 
             Intent mapIntent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(uri));
-            mapIntent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
+            mapIntent.setClassName(getString(R.string.google_maps_package), getString(R.string.google_maps_class_name));
             startActivity(mapIntent);
 
             try {
                 startActivity(mapIntent);
             } catch (ActivityNotFoundException e) {
 
-                Toast.makeText(this, "Setup Google Maps", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.setup_google_maps, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("market://details?id=com.google.android.apps.maps"));
+                intent.setData(Uri.parse(getString(R.string.google_maps_play_market)));
                 try {
                     startActivity(intent);
                 } catch (ActivityNotFoundException e1) {
-                    Toast.makeText(this, "Setup Google Play Services", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.setup_google_play, Toast.LENGTH_SHORT).show();
                 }
                 e.printStackTrace();
             }
 
         } else {
-            Toast.makeText(MainActivity.this, "Please fill fields first", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, R.string.fill_fields_first, Toast.LENGTH_SHORT).show();
         }
     }
 }

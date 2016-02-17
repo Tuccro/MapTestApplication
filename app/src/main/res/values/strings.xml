@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">MapTestApplication</string>
+    <string name="address_from">Address From</string>
+    <string name="address_to">Address To</string>
+    <string name="start">START</string>
+    <string name="setup_google_maps">Setup Google Maps</string>
+    <string name="fill_fields_first">Please fill fields first</string>
+    <string name="setup_google_play">Setup Google Play Services</string>
+    <string name="google_maps_url"><![CDATA[http://maps.google.com/maps?f=d&hl=en]]></string>
+    <string name="google_maps_play_market">market://details?id=com.google.android.apps.maps</string>
+    <string name="google_maps_package">com.google.android.apps.maps</string>
+    <string name="google_maps_class_name">com.google.android.maps.MapsActivity</string>
+    <string name="address1"><![CDATA[&saddr=]]></string>
+    <string name="address2"><![CDATA[&daddr=]]></string>
 </resources>

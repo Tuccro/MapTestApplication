@@ -19,21 +19,21 @@
             android:id="@+id/addressFrom"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:hint="Address From"
+            android:hint="@string/address_from"
             android:singleLine="true" />
 
         <EditText
             android:id="@+id/addressTo"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:hint="Address To"
+            android:hint="@string/address_to"
             android:singleLine="true" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="START" />
+            android:text="@string/start" />
     </LinearLayout>
 
 </RelativeLayout>
